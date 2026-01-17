@@ -1,0 +1,115 @@
+/* White Navbar Base Styles */
+.navbar {
+    background-color: #ffffff !important;
+    padding: 15px 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1030;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Navbar Scroll States (keep these) */
+.navbar-hidden {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-scrolled {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Brand/Logo with White Background */
+.navbar-brand {
+    color: #1a1a2e; /* Dark text for contrast */
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand:hover {
+    color: #16213e;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Nav Links for White Background */
+.navbar .nav-link {
+    color: #333333 !important; /* Dark text */
+    font-weight: 500;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #ff6b35 !important; /* Accent color on hover */
+    background-color: rgba(255, 107, 53, 0.08);
+}
+
+.navbar .nav-link.active {
+    color: #ff6b35 !important;
+    background-color: rgba(255, 107, 53, 0.1);
+}
+
+/* Dropdown Menu for White Navbar */
+.navbar .dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .dropdown-item {
+    color: #333333;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: rgba(255, 107, 53, 0.1);
+    color: #ff6b35;
+}
+
+/* Mobile Toggler for White Navbar */
+.navbar-toggler {
+    border: 2px solid rgba(26, 26, 46, 0.2);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2826, 26, 46, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Search Bar for White Navbar */
+.navbar .form-control {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #333333;
+}
+
+.navbar .btn-outline-light {
+    border-color: #dee2e6;
+    color: #666666;
+}
+
+/* CTA Button */
+.navbar .btn-warning {
+    background: linear-gradient(135deg, #ff6b35 0%, #f8b500 100%);
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 25px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 10px 0;
+    }
+}

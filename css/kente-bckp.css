@@ -1,0 +1,127 @@
+/*
+ * Kentescence Main Styles
+ * File: css/kente.css
+ */
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333; 
+    padding-top: 80px; /* Match navbar height */
+    min-height: 100vh;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.05) 0%, rgba(22, 33, 62, 0.05) 100%);
+    padding: 60px 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    color: #1a1a2e;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section .lead {
+    color: #ff6b35;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Content Section */
+.content-scroll {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+.content-scroll h2 {
+    color: #1a1a2e;
+    border-bottom: 3px solid #f8b500;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.content-scroll h3 {
+    color: #16213e;
+    margin-top: 40px;
+}
+
+.content-scroll h4 {
+    color: #ff6b35;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    color: #1a1a2e;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .hero-section {
+        padding: 40px 20px;
+        margin: 20px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.2rem;
+    }
+    
+    .content-scroll {
+        margin: 20px 0;
+        padding: 20px;
+    }
+}
+
+/* Animation for smooth appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section, .content-scroll {
+    animation: fadeInUp 0.6s ease-out;
+}
