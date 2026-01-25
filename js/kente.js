@@ -196,5 +196,40 @@ if (document.readyState === 'loading') {
     } else {
         initNavbarScroll();
     }
+
+    /**
+ * Shared JavaScript for all pages
+ * File: js/main.js
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Update current year in footer
+    const yearElements = document.querySelectorAll('#currentYear');
+    if (yearElements.length > 0) {
+        yearElements.forEach(el => {
+            el.textContent = new Date().getFullYear();
+        });
+    }
+
+    // Initialize tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
     
 })();

@@ -1,0 +1,13 @@
+/* Dark theme for all pages */
+.dark-theme {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+    color: #ffffff;
+}
+
+/* Ensure all pages have dark background */
+body {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+    color: #ffffff;
+    padding-top: 80px;
+    min-height: 100vh;
+}

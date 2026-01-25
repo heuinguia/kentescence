@@ -257,6 +257,10 @@ html {
 
 
 /* Footer */
+
+.footer-heading {
+    color: #f8b500 !important; /* Force yellow color */
+}
 .footer {
     background: linear-gradient(135deg, #0a0a14 0%, #121226 100%);
     border-top: 1px solid rgba(255, 107, 53, 0.1);
@@ -322,5 +326,52 @@ html {
     .footer h5 {
         font-size: 1.1rem;
     }
+}
+
+/* Shared styles for all pages */
+
+/* Common section titles */
+.section-title {
+    color: #ccccf8;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Common buttons */
+.btn-warning {
+    background: linear-gradient(135deg, #ff6b35 0%, #f8b500 100%);
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #e55a2b 0%, #e0a500 100%);
+    color: #ffffff;
+}
+
+/* Common cards */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.card-title {
+    color: #ff6b35;
+}
+
+/* Common form controls */
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ff6b35;
+    color: #ffffff;
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.25);
 }
 
